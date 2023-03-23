@@ -32,15 +32,15 @@ class App(tk.Frame):
             pass
 
     def all_labels(self):
-        piss = 0
-        pissy = 1
+        col = 0
+        row = 1
         for i in self.alph:
-            self.labels[i].grid(row=pissy, column=piss)
-            if piss >= 4:
-                piss = 0
-                pissy = 0
+            self.labels[i].grid(row=row, column=col)
+            if col >= 4:
+                col = 0
+                row = 0
             else:
-                piss = piss + 1
+                col = col + 1
     
     def togetherness(self):
         states = self.keyboard_states()
@@ -49,10 +49,8 @@ class App(tk.Frame):
             if pp in self.alph:
                 if states[1] == 'down':
                     self.labels[pp].configure(relief=FLAT)
-                    #print(pp,"down")
                 elif states[1] == 'up':
                     self.labels[pp].config(relief=RAISED)
-                    #print(pp,"up")
         else:
             pass
         self.after(1, self.togetherness)
@@ -60,5 +58,5 @@ class App(tk.Frame):
 
 root = tk.Tk()
 myapp = App(root)
-root.title("Keyboard-Overlay")
+root.title("Keyboard Overlay")
 root.mainloop()
