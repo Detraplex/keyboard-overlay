@@ -4,3 +4,7 @@ keyboard overlay for speedrunning and streaming, no coustomization as of yet, ho
 will scan the keyboard for w, a, s, d, up, down, esc, enter and r. will glich and stay in teh FLAT position, pressing the key again will rectify it.
 # upcoming fetures
 customization for what scanning will be caught, colors or custom buttons/pannel.
+# contributors
+Detraplex
+Grok
+BigPete1239
